@@ -24,7 +24,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <div id="root" class="container">
 
         <div class="wrapper">
 
@@ -84,11 +84,11 @@
 
                 <section id="users">
 
-                    <div class="img_text_cont">
-                        <div v-for="contact in contacts" class="img_cont">
-                            <img :src="immagine" alt="">
+                    <div v-for="contact in contacts" class="img_text_cont">
+                        <div class="img_cont">
+                            <img :src="contact.immagine" alt="">
                         </div>
-                        <span :class="name">{{ name }}</span>
+                        <span>{{ contact.name }}</span>
                     </div>
 
                 </section>
@@ -97,8 +97,36 @@
 
             <div class="block_right">
                 
-                <section id="interlocutor"></section>
+                <section id="interlocutor">
+
+                    <div class="img_text_cont">
+
+                        <div class="img_cont">
+                            <img src="img/avatar_1.jpg" alt="Michele">
+                        </div>
+
+                        <div class="name_access_cont">
+
+                            <span>Michele</span>
+                            <p>
+                                ultimo accesso oggi alle
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="interlocutor_icons">
+
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+
+                    </div>
+
+                </section>
+
                 <section id="chat"></section>
+
                 <section id="message_bar"></section>
 
             </div>
@@ -107,5 +135,6 @@
 
     </div>
     
+    <script src="js/main.js"></script>
 </body>
 </html>
