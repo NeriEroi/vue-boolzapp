@@ -28,27 +28,27 @@ body {
     /* / clearfix */
 }
 
-/* left block inside wrapper  */
+/* block left inside wrapper  */
 .wrapper .block_left {
     width: 40%;
     height: 100%;
     background-color: crimson;
     float: left;
 }
-/* / left block inside wrapper  */
+/* / block left inside wrapper  */
 
 
-/* right block inside wrapper  */
+/* block right inside wrapper  */
 .wrapper .block_right {
     width: 60%;
     height: 100%;
     background-color:rgb(233, 25, 25);
     float: right;
 }
-/* / right block inside wrapper  */
+/* / block right inside wrapper  */
 
 
-/* elements inside left block  */
+/* elements inside block left */
 
 /* main_user */
 .wrapper .block_left #main_user {
@@ -192,10 +192,10 @@ body {
 }
 /* / users */
 
-/* / elements inside left block  */
+/* / elements inside block left */
 
 
-/* elements inside right block  */
+/* elements inside block right  */
 .wrapper .block_right #interlocutor {
     width: 100%;
     height: 9%;
@@ -213,4 +213,4 @@ body {
     height: 9%;
     background-color: orangered;
 }
-/* / elements inside right block  */
+/* / elements inside block right */
