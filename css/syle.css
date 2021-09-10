@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, #D9DBD5 80%, #009688 20%) fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 80%;
+    height: 95%;
+    background-color: burlywood;
+    /* clearfix */
+    content: "";
+    display: table;
+    clear: both;
+    /* / clearfix */
+}
+
+/* left block inside wrapper  */
+.wrapper .block_left {
+    width: 40%;
+    height: 100%;
+    background-color: crimson;
+    float: left;
+}
+/* / left block inside wrapper  */
+
+
+/* right block inside wrapper  */
+.wrapper .block_right {
+    width: 60%;
+    height: 100%;
+    background-color:rgb(233, 25, 25);
+    float: right;
+}
+/* / right block inside wrapper  */
+
+
+/* elements inside left block  */
+.wrapper .block_left #main_user {
+    width: 100%;
+    height: 9%;
+    background-color: darkkhaki;
+}
+
+.wrapper .block_left #notifications {
+    width: 100%;
+    height: 10%;
+    background-color: floralwhite;
+}
+
+.wrapper .block_left #searchbar {
+    width: 100%;
+    height: 7%;
+    background-color: rgba(119, 240, 63, 0.877);
+}
+
+.wrapper .block_left #users {
+    width: 100%;
+    height: 74%;
+    background-color: rgb(49, 115, 182);
+}
+/* / elements inside left block  */
+
+
+/* elements inside right block  */
+.wrapper .block_right #interlocutor {
+    width: 100%;
+    height: 9%;
+    background-color: rgb(165, 159, 73);
+}
+
+.wrapper .block_right #chat {
+    width: 100%;
+    height: 82%;
+    background-color: rgb(73, 147, 165);
+}
+
+.wrapper .block_right #message_bar {
+    width: 100%;
+    height: 9%;
+    background-color: orangered;
+}
+
+
+/* / elements inside right block  */
