@@ -153,8 +153,9 @@ body {
 }
 
 .wrapper .block_left #searchbar .bar_cont input {
-    width: 99%;
+    width: 100%;
     height: 100%;
+    padding: 10px;
     border: 1px solid lightgray;
     outline: none;
 }
@@ -166,6 +167,7 @@ body {
     width: 100%;
     height: 74%;
     background-color: white;
+    overflow-y: scroll;
 }
 
 .wrapper .block_left #users .img_text_cont {
@@ -227,6 +229,11 @@ body {
     border-radius: 50%;
 }
 
+.wrapper .block_right #interlocutor .img_text_cont .name_access_cont p {
+    font-size: 10px;
+    color: grey;
+}
+
 .wrapper .block_right #interlocutor .interlocutor_icons {
     margin: 15px;
 }
@@ -237,15 +244,74 @@ body {
 }
 /* / interlocutor */
 
+
+/* chat */
 .wrapper .block_right #chat {
     width: 100%;
     height: 82%;
     background-color: rgb(73, 147, 165);
+    background-image: url("../img/mine.jpg");
+    overflow-y: scroll;
 }
+/* / chat */
 
+
+/* message bar */
 .wrapper .block_right #message_bar {
     width: 100%;
     height: 9%;
-    background-color: orangered;
+    background-color: #FFFFFF;
+    display: flex;
 }
+
+.wrapper .block_right #message_bar .smile_cont {
+    width: 10%;
+    height: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .block_right #message_bar .smile_cont i {
+    font-size: 20px;
+    color: grey;
+}
+
+.wrapper .block_right #message_bar .microphone_cont {
+    width: 10%;
+    height: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .block_right #message_bar .microphone_cont i {
+    font-size: 20px;
+    color: grey;
+}
+
+/* input */
+
+.wrapper .block_right #message_bar .input_cont {
+    width: 80%;
+    height: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .block_right #message_bar .input_cont input {
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+    outline: none;
+}
+
+/* input */
+
+/* message bar */
+
 /* / elements inside block right */
