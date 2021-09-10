@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <!-- / font -->
-    <!-- Google font awesome -->
+    <!-- / Google font -->
+
+    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- / font awesome -->
+
     <!-- cdn js -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <!-- / cdn js -->
+
     <!-- css -->
     <link rel="stylesheet" href="css/syle.css">
     <!-- / css -->
@@ -26,10 +30,68 @@
 
             <div class="block_left">
 
-                <section id="main_user"></section>
-                <section id="notifications"></section>
-                <section id="searchbar"></section>
-                <section id="users"></section>
+                <section id="main_user">
+
+                    <div class="img_text_cont">
+                        <div class="img_cont">
+                            <img src="img/avatar_io.jpg" alt="Paolo Dossetto">
+                        </div>
+                        <span>Paolo Dossetto</span>
+                    </div>
+
+                    <div class="icons">
+
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+
+                    </div>
+                    
+                </section>
+
+                <section id="notifications">
+
+                    <div class="bell_notifications_cont">
+
+                        <div class="bell_cont">
+                            <i class="fas fa-bell-slash"></i>
+                        </div>
+
+                        <span>
+                            <p><strong>Ricevi notifiche di nuovi messaggi</strong></p>
+                            <p><a href="">Attiva notifiche desktop</a></p>
+                        </span>
+
+                    </div>
+
+                </section>
+
+                <section id="searchbar">
+
+                    <div class="wrap_searchbar">
+
+                        <div class="search_cont">
+                            <i class="fas fa-search"></i>
+                        </div>
+    
+                        <div class="bar_cont">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+
+                    </div>
+                    
+                </section>
+
+                <section id="users">
+
+                    <div class="img_text_cont">
+                        <div v-for="contact in contacts" class="img_cont">
+                            <img :src="immagine" alt="">
+                        </div>
+                        <span :class="name">{{ name }}</span>
+                    </div>
+
+                </section>
 
             </div>
 
