@@ -84,9 +84,9 @@
 
                 <section id="users">
 
-                    <div v-for="contact in contacts" class="img_text_cont">
+                    <div v-for="(contact, index) in contacts" @click="showChat(index)" class="img_text_cont">
                         <div class="img_cont">
-                            <img :src="contact.immagine" alt="">
+                            <img :src="contact.immagine" :alt="contact.name">
                         </div>
                         <span>{{ contact.name }}</span>
                     </div>
@@ -102,12 +102,12 @@
                     <div class="img_text_cont">
 
                         <div class="img_cont">
-                            <img src="img/avatar_1.jpg" alt="Michele">
+                            <img :src="contacts[selectedChat].immagine" :alt="contacts[selectedChat].name">
                         </div>
 
                         <div class="name_access_cont">
 
-                            <span>Michele</span>
+                            <span>{{ contacts[selectedChat].name }}</span>
                             <p>
                                 ultimo accesso oggi alle
                             </p>
@@ -129,6 +129,22 @@
 
                     <div class="img">
                         <!-- immagine in background della chat -->
+                    </div>
+
+                    <div class="messages_cont">
+
+                        <div id="chat_user">
+                            
+                            <div class="text_message">
+                                
+                            </div>
+
+                            <div class="date_message">
+                                
+                            </div>
+    
+                        </div>
+
                     </div>
 
                 </section>

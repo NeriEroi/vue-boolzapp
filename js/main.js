@@ -88,11 +88,14 @@ const app = new Vue (
                         status: 'received'
                     }
                 ],
-            },
-        ]
+            }
+        ],
+        selectedChat: 0,
     },
     methods: {
-
+        showChat(index) {
+            this.selectedChat = index;
+        }
     }
 }
 );

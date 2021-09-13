@@ -175,15 +175,18 @@ body {
     border-bottom: 1px solid lightgrey;
     display: flex;
     align-items: center;
-    padding-top: 10px;
+    padding: 5px 0 10px 10px;
     margin-left: 10px;
+}
+
+.wrapper .block_left #users .img_text_cont:hover {
+    background-color: lightgray;
 }
 
 .wrapper .block_left #users .img_text_cont .img_cont {
     width: 45px;
     height: 70%;
 }
-
 
 .wrapper .block_left #users .img_text_cont .img_cont img {
     width: 100%;
@@ -253,6 +256,8 @@ body {
     background-image: url("../img/mine.jpg");
     overflow-y: scroll;
 }
+
+
 /* / chat */
 
 
