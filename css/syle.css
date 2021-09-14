@@ -257,7 +257,13 @@ body {
     overflow-y: scroll;
 }
 
+#chat .message_cont .message.sent {
+    background-color: rgb(14, 184, 14);
+}
 
+#chat .message_cont .message.received {
+    background-color: coral;
+}
 /* / chat */
 
 

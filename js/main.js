@@ -78,10 +78,10 @@ const app = new Vue (
                 immagine: "./img/avatar_4.jpg",
                 visible: true,
                 messages: [{
-                    date: '10/01/2020 15:30:55',
-                    message: 'Lo sai che ha aperto una nuova pizzeria?',
-                    status: 'sent'
-                },
+                        date: '10/01/2020 15:30:55',
+                        message: 'Lo sai che ha aperto una nuova pizzeria?',
+                        status: 'sent'
+                    },
                     {
                         date: '10/01/2020 15:50:00',
                         message: 'Si, ma preferirei andare al cinema',
@@ -93,6 +93,11 @@ const app = new Vue (
         selectedChat: 0,
     },
     methods: {
+        getMessageClass(index) {
+            let thisContact = this.contacts[this.selectedChat];
+            let messageClass = 'message ' + thisContact.messages[index].status;
+            return messageClass;
+        },
         showChat(index) {
             this.selectedChat = index;
         }
