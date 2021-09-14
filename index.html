@@ -134,14 +134,16 @@
                     <div class="messages_cont">
 
                         <div v-for="(message, index) in contacts[selectedChat].messages" 
-                        :class="getMessageClass(index)">
+                        :class="getMessageClass(index)" id="messages_box_width">
                             
                             <div class="text_message">
                                 {{ message.message }}
                             </div>
 
-                            <div class="date_message">
-                                {{ message.date }}
+                            <div class="flex_date">
+                                <div class="date_message">
+                                    {{ message.date }}
+                                </div>
                             </div>
     
                         </div>

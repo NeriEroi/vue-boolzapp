@@ -257,12 +257,46 @@ body {
     overflow-y: scroll;
 }
 
-#chat .message_cont .message.sent {
-    background-color: rgb(14, 184, 14);
+.wrapper .block_right #chat .messages_cont {
+    margin-top: 40px;
 }
 
-#chat .message_cont .message.received {
-    background-color: coral;
+.wrapper .block_right #chat .messages_cont #messages_box_width {
+    width: 280px;
+}
+
+/* with js */
+#chat .messages_cont .message.sent {
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 5px 50px 5px 5px;
+    background-color: #E1FFC8;
+    float: right;
+    clear: both;
+}
+
+#chat .messages_cont .message.received {
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 5px 5px 5px 50px;
+    background-color: whitesmoke;
+    float: left;
+    clear: both;
+}
+/* / with js */
+
+.wrapper .block_right #chat .messages_cont .flex_date {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#chat .messages_cont .text_message {
+    font-size: 14px;
+}
+
+#chat .messages_cont .date_message {
+    font-size: 10px;
+    padding-top: 5px;
 }
 /* / chat */
 
