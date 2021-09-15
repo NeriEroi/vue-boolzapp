@@ -93,6 +93,8 @@ const app = new Vue (
         newMessage: '',
         selectedChat: 0,
     },
+    mounted() {   
+    },
     methods: {
         getMessageClass(index) {
             let thisContact = this.contacts[this.selectedChat];
@@ -102,12 +104,20 @@ const app = new Vue (
         addNewMessage() {
             let thisContact = this.contacts[this.selectedChat];
 
-            thisContact.message.push({
+            thisContact.messages.push({
                 message: this.newMessage,
                 date: dayjs().format('DD/MM/YYYY hh:mm:ss'),
                 status: 'sent',
             });
             this.newMessage = "";
+
+            setTimeout(() => {
+                thisContact.messages.push({
+                    message: "ok",
+                    date: dayjs().format('DD/MM/YYYY hh:mm:ss'),
+                    status: 'received',
+                })
+            }, 1000);
         },
         showChat(index) {
             this.selectedChat = index;
