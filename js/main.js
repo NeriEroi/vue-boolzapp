@@ -90,6 +90,7 @@ const app = new Vue (
                 ],
             }
         ],
+        newMessage: '',
         selectedChat: 0,
     },
     methods: {
@@ -97,6 +98,16 @@ const app = new Vue (
             let thisContact = this.contacts[this.selectedChat];
             let messageClass = 'message ' + thisContact.messages[index].status;
             return messageClass;
+        },
+        addNewMessage() {
+            let thisContact = this.contacts[this.selectedChat];
+
+            thisContact.message.push({
+                message: this.newMessage,
+                date: dayjs().format('DD/MM/YYYY hh:mm:ss'),
+                status: 'sent',
+            });
+            this.newMessage = "";
         },
         showChat(index) {
             this.selectedChat = index;

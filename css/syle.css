@@ -297,6 +297,7 @@ body {
 #chat .messages_cont .date_message {
     font-size: 10px;
     padding-top: 5px;
+    color: grey;
 }
 /* / chat */
 
