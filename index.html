@@ -79,7 +79,7 @@
                         </div>
     
                         <div class="bar_cont">
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchContactText" @keyup="searchContacts">
                         </div>
 
                     </div>
@@ -88,7 +88,7 @@
 
                 <section id="users">
 
-                    <div v-for="(contact, index) in contacts" @click="showChat(index)" class="img_text_cont">
+                    <div v-for="(contact, index) in contacts" @click="showChat(index)" v-if="contact.visible" class="img_text_cont">
                         <div class="img_cont">
                             <img :src="contact.immagine" :alt="contact.name">
                         </div>
